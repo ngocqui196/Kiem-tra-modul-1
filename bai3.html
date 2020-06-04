@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra bài 3</title>
+</head>
+<body>
+<script>
+
+    let fibonacci_series = function ( n )
+    {
+        if (n===1)
+        {
+            return [0, 1];
+        }
+        else
+        {
+            let s = fibonacci_series(n - 1);
+            s.push(s[s.length - 1] + s[s.length - 2]);
+            return s;
+        }
+    };
+    let number = 5;
+    fibonacci_series(number);
+    let arr = fibonacci_series(number);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === number) {
+            document.write(number + " is a fibonacci")
+        }
+    }
+
+</script>
+</body>
+</html>

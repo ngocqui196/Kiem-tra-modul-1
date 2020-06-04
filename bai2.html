@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài kiểm tra 2</title>
+</head>
+<body>
+<input id="tryRemoveFromArray" type="number">
+<br>
+<button onclick="result()">Nhập</button>
+<script>
+    function tryRemoveFromArray(x) {
+        let num = [1,3,5,9,4,6,7,8];
+        for(let i = 0; i < num.length;i++) {
+            if (num[i] === x) {
+                return num.pop();
+            } else {
+                return num;
+            }
+        }
+        
+    }
+    function result() {
+        document.write(tryRemoveFromArray(5))
+    }
+
+</script>
+</body>
+</html>
